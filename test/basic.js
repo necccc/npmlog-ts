@@ -204,7 +204,9 @@ tap.test('basic', function (t) {
   log.silent('silent prefix', 'x = %j', {foo:{bar:'baz'}})
 
   console.error('log.level=info')
+  console.error('log.timestamp=true')
   log.level = 'info'
+  log.timestamp = true
   log.silly('silly prefix', 'x = %j', {foo:{bar:'baz'}})
   log.verbose('verbose prefix', 'x = %j', {foo:{bar:'baz'}})
   log.info('info prefix', 'x = %j', {foo:{bar:'baz'}})

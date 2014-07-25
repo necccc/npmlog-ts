@@ -63,6 +63,7 @@ log.log = function (lvl, prefix, message) {
   message = util.format.apply(util, a)
 
   var m = { id: id++,
+            ts: new Date(),
             level: lvl,
             prefix: String(prefix || ''),
             message: message,
@@ -98,6 +99,10 @@ log.emitLog = function (m) {
   m.message.split(/\r?\n/).forEach(function (line) {
     if (this.heading) {
       this.write(this.heading, this.headingStyle)
+      this.write(' ')
+    }
+    if (this.timestamp) {
+      this.write((new Date()).toISOString().replace('T', ' ').replace('Z', ''))
       this.write(' ')
     }
     this.write(disp, log.style[m.level])

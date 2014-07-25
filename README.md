@@ -1,4 +1,4 @@
-# npmlog
+# npmlog-
 
 The logger util that npm uses.
 
@@ -58,6 +58,14 @@ A style object that specifies how prefixes are styled.  (See below)
 * {Object}
 
 A style object that specifies how the heading is styled.  (See below)
+
+## log.timestamp
+
+* {Boolean} Default: false 
+
+Timestamp to every line after the heading. (See below)
+Current timestamp format example:
+`2014-07-25 08:24:30.359`
 
 ## log.heading
 

@@ -22,6 +22,8 @@ log.warn('warn prefix', 'x = %j', {foo:{bar:'baz'}})
 log.error('error prefix', 'x = %j', {foo:{bar:'baz'}})
 log.silent('silent prefix', 'x = %j', {foo:{bar:'baz'}})
 
+log.timestamp = true
+console.error('log.timestamp=true')
 console.error('log.level=info')
 log.level = 'info'
 log.silly('silly prefix', 'x = %j', {foo:{bar:'baz'}})
